@@ -21,9 +21,11 @@ export const downloads: Download[] = [
 
 export const socials: Social[] = [
   { name: 'Nostr', href: '' },
-  { name: 'X', href: '' },
-  { name: 'Telegram', href: '' },
+  { name: 'X', href: 'https://x.com/zular_net' },
+  { name: 'Telegram', href: 'https://t.me/zular_net' },
 ];
+
+export const xHandle = '@zular_net';
 
 export const donationAddresses = { bitcoin: '', lightning: '' };
 

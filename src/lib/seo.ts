@@ -1,6 +1,6 @@
 // Titles, descriptions and share images for each page. The build writes these into the HTML,
 // because link previews and many crawlers don't run JavaScript.
-import { socials } from '../config.ts';
+import { socials, xHandle } from '../config.ts';
 import { canonicalUrlFor, SITE_URL, type Route } from './route.ts';
 
 const SITE_NAME = 'Zular';
@@ -95,6 +95,7 @@ export function renderHead(route: Route, { noindex = false }: HeadOptions = {}):
     metaProperty('og:image:height', String(SHARE_IMAGE_HEIGHT)),
     metaProperty('og:image:alt', page.imageAlt),
     metaName('twitter:card', 'summary_large_image'),
+    metaName('twitter:site', xHandle),
     metaName('twitter:title', page.title),
     metaName('twitter:description', page.description),
     metaName('twitter:image', image),
