@@ -8,7 +8,7 @@ export interface Download {
   status: string;
 }
 
-export type SocialName = 'Nostr' | 'X' | 'Telegram';
+export type SocialName = 'Nostr' | 'X' | 'Telegram' | 'GitHub';
 
 export interface Social {
   name: SocialName;
@@ -25,6 +25,7 @@ export const socials: Social[] = [
   { name: 'Nostr', href: '' },
   { name: 'X', href: 'https://x.com/zular_net' },
   { name: 'Telegram', href: 'https://t.me/zular_net' },
+  { name: 'GitHub', href: 'https://github.com/zular-net' },
 ];
 
 export const xHandle = '@zular_net';

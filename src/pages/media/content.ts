@@ -159,7 +159,7 @@ export const boilerplate: Boilerplate[] = [
   {
     id: 'long',
     label: 'Paragraph',
-    text: 'Zular is a custodial Bitcoin Lightning wallet for everyday people. Pay anyone by their Telegram handle, send sats as a gift link, trade in a peer-to-peer market with trust scores built from real trades and reports, and buy on a schedule with DCA plans.',
+    text: 'Zular is a custodial Bitcoin Lightning wallet for everyday people. Pay anyone by their Telegram handle and send sats as a gift link. A peer-to-peer market with trust scores and DCA plans are coming soon.',
   },
 ];
 

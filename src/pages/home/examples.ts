@@ -149,6 +149,6 @@ export const roadmap: string[] = [
 
 export const fees: Fee[] = [
   { value: 'Free', label: 'Sends and Telegram payments' },
-  { value: '0.5%', label: 'P2P trades, paid by the seller' },
+  { value: '0.5%', label: 'P2P trades, once they launch. The seller pays.' },
   { value: '1%', label: 'Gift links' },
 ];

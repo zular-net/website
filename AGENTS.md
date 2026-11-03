@@ -31,6 +31,7 @@ Run `npm run check` before pushing. Every push to `main` publishes to https://zu
 - **3D bolt:** render the real `public/models/zular-bolt-v3a.glb`. An SVG or image of it isn't a substitute, except as the fallback when 3D fails.
 - **Examples:** invented names, amounts and prices must be labelled as examples on the page.
 - **Share images:** each page has a designed 1200 by 630 banner in `public/`. Never use a screenshot of the page.
+- **Coming soon:** P2P and DCA are off for now. `HomePage.tsx` shows `ComingSoonSection`; `MarketSection` and `DcaSection` stay in the repo for when they launch.
 - **Domain:** `zular.net`. The old Daric name and orange logo appear only in the rule telling people not to use them.
 - **Design:** the source is the `Website` and `Media assets` sections on the `UI` page of the Zular Figma file. Tokens in `global.css` mirror its variables.
 

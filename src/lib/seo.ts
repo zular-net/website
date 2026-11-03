@@ -20,7 +20,7 @@ export const PAGES: Record<Route, PageMeta> = {
   home: {
     title: 'Zular: Bitcoin Lightning wallet. Avant-garde, money.',
     description:
-      'A Bitcoin Lightning wallet for everyday people. Pay anyone by Telegram handle, send gift links, trade P2P with trust scores, and buy on a DCA schedule.',
+      'A Bitcoin Lightning wallet for everyday people. Pay anyone by Telegram handle and send gift links. A P2P market and DCA plans are coming soon.',
     image: '/og-home.jpg',
     imageAlt: 'The Zular 3D bolt beside the words: Avant-garde, money.',
   },

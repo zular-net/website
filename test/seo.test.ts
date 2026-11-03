@@ -29,7 +29,11 @@ test('only the home page carries structured data', () => {
   const json = home.slice(home.indexOf(start) + start.length, home.indexOf('</script>'));
   const organization = JSON.parse(json)['@graph'][0];
   assert.equal(organization.name, 'Zular');
-  assert.deepEqual(organization.sameAs, ['https://x.com/zular_net', 'https://t.me/zular_net']);
+  assert.deepEqual(organization.sameAs, [
+    'https://x.com/zular_net',
+    'https://t.me/zular_net',
+    'https://github.com/zular-net',
+  ]);
   assert.ok(!renderHead('media').includes(start));
 });
 

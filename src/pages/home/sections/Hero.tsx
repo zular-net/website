@@ -25,7 +25,7 @@ export default function Hero() {
         <div className={styles.foot}>
           <p className={styles.lede}>
             A Bitcoin Lightning wallet for everyday people. Pay anyone by their Telegram handle,
-            send sats as a gift link, trade with people you trust, and stack on a schedule.
+            send sats as a gift link. A P2P market and DCA plans are coming soon.
           </p>
           <div className={styles.actions}>
             <Button href="#get" onClick={(event) => scrollToSection(event, 'get')}>
