@@ -73,7 +73,9 @@ function TrustGraph() {
         </svg>
         <BoltAnchor className={styles.graphBolt} />
       </div>
-      <p className={styles.graphCaption}>Example: @lena is two trades away from you, through Noor.</p>
+      <p className={styles.graphCaption}>
+        Example: @lena is two trades away from you, through Noor.
+      </p>
     </div>
   );
 }

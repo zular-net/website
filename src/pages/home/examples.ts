@@ -38,15 +38,65 @@ export interface Fee {
 }
 
 export const activity: ActivityItem[] = [
-  { id: 1, initial: 'N', tone: 'teal', title: 'Noor A.', subtitle: 'Received · Today, 10:42', amount: '+8,200', meta: '≈ $9.02', positive: true },
-  { id: 2, initial: 'S', tone: 'blue', title: 'Gift link', subtitle: 'Claimed by Sam · Yesterday', amount: '−10,000', meta: '≈ $11.00' },
-  { id: 3, initial: 'L', tone: 'purple', title: 'P2P trade', subtitle: 'Bought from @lena · Yesterday', amount: '+150,000', meta: '≈ $165.00', positive: true },
-  { id: 4, initial: 'C', tone: 'amber', title: 'Café Roma', subtitle: 'Invoice · Oct 31', amount: '−4,300', meta: '≈ $4.73' },
+  {
+    id: 1,
+    initial: 'N',
+    tone: 'teal',
+    title: 'Noor A.',
+    subtitle: 'Received · Today, 10:42',
+    amount: '+8,200',
+    meta: '≈ $9.02',
+    positive: true,
+  },
+  {
+    id: 2,
+    initial: 'S',
+    tone: 'blue',
+    title: 'Gift link',
+    subtitle: 'Claimed by Sam · Yesterday',
+    amount: '−10,000',
+    meta: '≈ $11.00',
+  },
+  {
+    id: 3,
+    initial: 'L',
+    tone: 'purple',
+    title: 'P2P trade',
+    subtitle: 'Bought from @lena · Yesterday',
+    amount: '+150,000',
+    meta: '≈ $165.00',
+    positive: true,
+  },
+  {
+    id: 4,
+    initial: 'C',
+    tone: 'amber',
+    title: 'Café Roma',
+    subtitle: 'Invoice · Oct 31',
+    amount: '−4,300',
+    meta: '≈ $4.73',
+  },
 ];
 
 export const offers: Offer[] = [
-  { id: 1, initial: 'L', tone: 'purple', handle: '@lena', detail: 'Sells 150,000 sats · Bank transfer', score: 0.91, price: '$165.00' },
-  { id: 2, initial: 'O', tone: 'blue', handle: '@omar', detail: 'Sells 50,000 sats · Cash app', score: 0.72, price: '$55.40' },
+  {
+    id: 1,
+    initial: 'L',
+    tone: 'purple',
+    handle: '@lena',
+    detail: 'Sells 150,000 sats · Bank transfer',
+    score: 0.91,
+    price: '$165.00',
+  },
+  {
+    id: 2,
+    initial: 'O',
+    tone: 'blue',
+    handle: '@omar',
+    detail: 'Sells 50,000 sats · Cash app',
+    score: 0.72,
+    price: '$55.40',
+  },
 ];
 
 export const trustGraph: {
@@ -71,12 +121,31 @@ export const trustGraph: {
   ],
   // Highlighted links show the path to @lena.
   links: [
-    ['me', 'N', true], ['me', 'S'], ['me', 'O'], ['N', 'L', true], ['S', 'L'], ['S', 'A'], ['N', 'A'],
-    ['O', 'R'], ['me', 'R'], ['N', 'J'], ['O', 'J'], ['S', 'T'], ['L', 'T'], ['L', 'R'],
+    ['me', 'N', true],
+    ['me', 'S'],
+    ['me', 'O'],
+    ['N', 'L', true],
+    ['S', 'L'],
+    ['S', 'A'],
+    ['N', 'A'],
+    ['O', 'R'],
+    ['me', 'R'],
+    ['N', 'J'],
+    ['O', 'J'],
+    ['S', 'T'],
+    ['L', 'T'],
+    ['L', 'R'],
   ],
 };
 
-export const roadmap: string[] = ['Self-custody', 'iOS', 'Merchant POS', 'Payment gateway', 'NFC tap-to-pay', 'Subscriptions'];
+export const roadmap: string[] = [
+  'Self-custody',
+  'iOS',
+  'Merchant POS',
+  'Payment gateway',
+  'NFC tap-to-pay',
+  'Subscriptions',
+];
 
 export const fees: Fee[] = [
   { value: 'Free', label: 'Sends and Telegram payments' },

@@ -4,26 +4,26 @@ Instructions for anyone changing this repo, human or AI. `CLAUDE.md` points here
 
 ## Commands
 
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Runs the site locally |
-| `npm run check` | Runs everything CI runs: format, lint, types, tests, build |
-| `npm run format` | Fixes formatting |
+| Command          | What it does                                               |
+| ---------------- | ---------------------------------------------------------- |
+| `npm run dev`    | Runs the site locally                                      |
+| `npm run check`  | Runs everything CI runs: format, lint, types, tests, build |
+| `npm run format` | Fixes formatting                                           |
 
 Run `npm run check` before pushing. Every push to `main` publishes to https://zular.net once CI passes.
 
 ## Where things go
 
-| To change | Edit |
-| --- | --- |
-| Links, addresses, contact email | `src/config.ts` |
-| Home page section | `src/pages/home/sections/` |
-| Sample activity, offers, fees, roadmap | `src/pages/home/examples.ts` |
-| Media page text and asset lists | `src/pages/media/content.ts` |
-| Media files | `public/brand-assets/`, then rebuild `zular-media-kit.zip` |
-| Colors, radii, fonts | `src/styles/global.css` |
-| Logic with no UI | `src/lib/`, with a test in `test/` |
-| A new page | Add it to `Route` in `src/lib/route.ts`, then `src/App.tsx` and `scripts/postbuild.js` |
+| To change                              | Edit                                                                                   |
+| -------------------------------------- | -------------------------------------------------------------------------------------- |
+| Links, addresses, contact email        | `src/config.ts`                                                                        |
+| Home page section                      | `src/pages/home/sections/`                                                             |
+| Sample activity, offers, fees, roadmap | `src/pages/home/examples.ts`                                                           |
+| Media page text and asset lists        | `src/pages/media/content.ts`                                                           |
+| Media files                            | `public/brand-assets/`, then rebuild `zular-media-kit.zip`                             |
+| Colors, radii, fonts                   | `src/styles/global.css`                                                                |
+| Logic with no UI                       | `src/lib/`, with a test in `test/`                                                     |
+| A new page                             | Add it to `Route` in `src/lib/route.ts`, then `src/App.tsx` and `scripts/postbuild.js` |
 
 ## Product rules
 

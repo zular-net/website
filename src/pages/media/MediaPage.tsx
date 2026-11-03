@@ -7,15 +7,7 @@ import CopyField from '../../components/ui/CopyField.tsx';
 import Icon from '../../components/ui/Icon.tsx';
 import { contactEmail } from '../../config.ts';
 import { assetUrl, FULL_KIT } from '../../lib/assets.ts';
-import {
-  boilerplate,
-  colors,
-  donts,
-  dos,
-  logos,
-  productImages,
-  typefaces,
-} from './content.ts';
+import { boilerplate, colors, donts, dos, logos, productImages, typefaces } from './content.ts';
 import { ColorSwatch, CopyTextButton, Download, LogoTile } from './parts.tsx';
 import styles from './MediaPage.module.css';
 
@@ -74,7 +66,10 @@ export default function MediaPage() {
               >
                 PNG, transparent
               </Download>
-              <Download file="3d/zular-bolt-3d-on-ink.png" label="Download the 3D bolt render on ink">
+              <Download
+                file="3d/zular-bolt-3d-on-ink.png"
+                label="Download the 3D bolt render on ink"
+              >
                 PNG, on ink
               </Download>
             </div>

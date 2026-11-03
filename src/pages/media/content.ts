@@ -41,14 +41,70 @@ export interface Boilerplate {
 }
 
 export const logos: LogoAsset[] = [
-  { id: 'mark-violet', name: 'Mark', note: 'Default', file: 'logos/zular-mark-violet', background: 'dark', kind: 'tall' },
-  { id: 'mark-white', name: 'Mark, white', note: 'On violet or photos', file: 'logos/zular-mark-white', background: 'violet', kind: 'tall' },
-  { id: 'mark-ink', name: 'Mark, ink', note: 'On light', file: 'logos/zular-mark-ink', background: 'light', kind: 'tall' },
-  { id: 'logo-dark', name: 'Logo', note: 'On dark', file: 'logos/zular-logo-on-dark', background: 'dark', kind: 'wide' },
-  { id: 'logo-light', name: 'Logo', note: 'On light', file: 'logos/zular-logo-on-light', background: 'light', kind: 'wide' },
-  { id: 'logo-white', name: 'Logo, white', note: 'On violet or photos', file: 'logos/zular-logo-white', background: 'violet', kind: 'wide' },
-  { id: 'icon-violet', name: 'App icon', note: 'Default', file: 'logos/zular-app-icon-violet', background: 'dark', kind: 'icon' },
-  { id: 'icon-dark', name: 'App icon, dark', note: 'Dark mode', file: 'logos/zular-app-icon-dark', background: 'raised', kind: 'icon' },
+  {
+    id: 'mark-violet',
+    name: 'Mark',
+    note: 'Default',
+    file: 'logos/zular-mark-violet',
+    background: 'dark',
+    kind: 'tall',
+  },
+  {
+    id: 'mark-white',
+    name: 'Mark, white',
+    note: 'On violet or photos',
+    file: 'logos/zular-mark-white',
+    background: 'violet',
+    kind: 'tall',
+  },
+  {
+    id: 'mark-ink',
+    name: 'Mark, ink',
+    note: 'On light',
+    file: 'logos/zular-mark-ink',
+    background: 'light',
+    kind: 'tall',
+  },
+  {
+    id: 'logo-dark',
+    name: 'Logo',
+    note: 'On dark',
+    file: 'logos/zular-logo-on-dark',
+    background: 'dark',
+    kind: 'wide',
+  },
+  {
+    id: 'logo-light',
+    name: 'Logo',
+    note: 'On light',
+    file: 'logos/zular-logo-on-light',
+    background: 'light',
+    kind: 'wide',
+  },
+  {
+    id: 'logo-white',
+    name: 'Logo, white',
+    note: 'On violet or photos',
+    file: 'logos/zular-logo-white',
+    background: 'violet',
+    kind: 'wide',
+  },
+  {
+    id: 'icon-violet',
+    name: 'App icon',
+    note: 'Default',
+    file: 'logos/zular-app-icon-violet',
+    background: 'dark',
+    kind: 'icon',
+  },
+  {
+    id: 'icon-dark',
+    name: 'App icon, dark',
+    note: 'Dark mode',
+    file: 'logos/zular-app-icon-dark',
+    background: 'raised',
+    kind: 'icon',
+  },
 ];
 
 export const colors: BrandColor[] = [
@@ -61,20 +117,50 @@ export const colors: BrandColor[] = [
 ];
 
 export const typefaces: Typeface[] = [
-  { name: 'Inter', role: 'Headlines, amounts and text', family: 'var(--sans)', sample: 'Avant-garde, money.', weight: 600, href: 'https://fonts.google.com/specimen/Inter' },
-  { name: 'IBM Plex Mono', role: 'Addresses and invoices', family: 'var(--mono)', sample: 'kayhan@zular.net', weight: 500, href: 'https://fonts.google.com/specimen/IBM+Plex+Mono' },
+  {
+    name: 'Inter',
+    role: 'Headlines, amounts and text',
+    family: 'var(--sans)',
+    sample: 'Avant-garde, money.',
+    weight: 600,
+    href: 'https://fonts.google.com/specimen/Inter',
+  },
+  {
+    name: 'IBM Plex Mono',
+    role: 'Addresses and invoices',
+    family: 'var(--mono)',
+    sample: 'kayhan@zular.net',
+    weight: 500,
+    href: 'https://fonts.google.com/specimen/IBM+Plex+Mono',
+  },
 ];
 
 export const productImages: ProductImage[] = [
-  { name: 'Balance card', file: 'product/zular-balance-card.png', alt: 'Zular balance card showing a sample balance in sats' },
-  { name: 'Gift card', file: 'product/zular-gift-card.png', alt: 'Zular gift card for 10,000 sats, with a sample message' },
-  { name: 'Social banner', file: 'product/zular-social-banner.png', alt: 'Zular banner with the words Avant-garde, money and the 3D bolt' },
+  {
+    name: 'Balance card',
+    file: 'product/zular-balance-card.png',
+    alt: 'Zular balance card showing a sample balance in sats',
+  },
+  {
+    name: 'Gift card',
+    file: 'product/zular-gift-card.png',
+    alt: 'Zular gift card for 10,000 sats, with a sample message',
+  },
+  {
+    name: 'Social banner',
+    file: 'product/zular-social-banner.png',
+    alt: 'Zular banner with the words Avant-garde, money and the 3D bolt',
+  },
 ];
 
 export const boilerplate: Boilerplate[] = [
   { id: 'motto', label: 'Motto', text: 'Avant-garde, money.' },
   { id: 'short', label: 'One line', text: 'Zular is a Lightning wallet for everyday people.' },
-  { id: 'long', label: 'Paragraph', text: 'Zular is a custodial Bitcoin Lightning wallet for everyday people. Pay anyone by their Telegram handle, send sats as a gift link, trade in a peer-to-peer market with trust scores built from real trades and reports, and buy on a schedule with DCA plans.' },
+  {
+    id: 'long',
+    label: 'Paragraph',
+    text: 'Zular is a custodial Bitcoin Lightning wallet for everyday people. Pay anyone by their Telegram handle, send sats as a gift link, trade in a peer-to-peer market with trust scores built from real trades and reports, and buy on a schedule with DCA plans.',
+  },
 ];
 
 export const dos: string[] = [

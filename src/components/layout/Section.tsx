@@ -8,7 +8,13 @@ interface SectionProps {
 }
 
 /** Centers content at the site's width, with its side gutters. */
-export function Container({ className = '', children }: { className?: string; children: ReactNode }) {
+export function Container({
+  className = '',
+  children,
+}: {
+  className?: string;
+  children: ReactNode;
+}) {
   return <div className={`${styles.container} ${className}`}>{children}</div>;
 }
 

@@ -4,8 +4,7 @@ import styles from './ui.module.css';
 type Variant = 'primary' | 'surface';
 
 type ButtonProps = { variant?: Variant } & (
-  | ({ href: string } & ComponentProps<'a'>)
-  | ({ href?: undefined } & ComponentProps<'button'>)
+  ({ href: string } & ComponentProps<'a'>) | ({ href?: undefined } & ComponentProps<'button'>)
 );
 
 /** Renders a link when given href, otherwise a button. */
