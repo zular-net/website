@@ -10,7 +10,7 @@ npm run dev
 ```
 
 ```sh
-npm test            # logic tests, no extra packages needed
+npm run check       # format, lint, types, tests and build, as in CI
 npm run build       # production build in dist/
 docker compose up --build
 ```
@@ -21,17 +21,18 @@ Every push to `main` runs the tests, builds the site and publishes it to https:/
 
 ## Change the content
 
-- `src/config.js`: download links, social links, donation addresses, contact email. Blank values stay hidden or show "Coming soon".
-- `src/data/examples.js`: the sample activity, offers and trust graph.
-- `src/data/media.js` and `public/brand-assets/`: the media assets page and its files.
+- `src/config.ts`: download links, social links, donation addresses, contact email. Blank values stay hidden or show "Coming soon".
+- `src/pages/home/examples.ts`: the sample activity, offers and trust graph.
+- `src/pages/media/content.ts` and `public/brand-assets/`: the media assets page and its files.
 
 ## How it's organised
 
-- `src/pages/`: the home page and the media assets page at `/media`.
-- `src/sections/`: one component per home page section.
-- `src/components/`: `ui` (buttons, rows, icons), `card` (balance card), `layout` (section, nav, footer), `bolt` (3D).
-- `src/lib/`: pure logic with tests in `test/`.
+- `src/pages/`: `home` and `media`, each with its own content and navigation.
+- `src/components/`: shared parts. `ui` (buttons, rows, icons), `card` (balance card), `layout` (section, nav, footer), `bolt` (3D).
+- `src/lib/` and `src/hooks/`: logic, with tests for `lib` in `test/`.
 - `src/styles/`: tokens that mirror the Figma variables.
+
+See [AGENTS.md](AGENTS.md) for commands, conventions and product rules.
 
 ## The 3D bolt
 

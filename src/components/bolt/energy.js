@@ -1,3 +1,4 @@
+// Copied from brand/3d/zular-energy.js in the brand assets. Keep the two in step.
 // Zular energy effects for three.js — reusable in any app that loads zular-bolt-v3*.glb
 //   chargeCrystal(mesh, opts)  -> v3a: crystal with moving electric veins on its surface
 //   plasmafy(mesh, opts)       -> v3b: white-hot plasma core, faceted, flickering
