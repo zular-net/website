@@ -1,0 +1,16 @@
+name: Diag
+on:
+  push:
+    branches: [diag]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for r in 8.8.8.8 1.1.1.1; do echo "== $r"; dig @$r +short zular.net A; dig @$r +short zular.net AAAA; echo "CAA: $(dig @$r +short zular.net CAA)"; echo "net CAA: $(dig @$r +short net CAA)"; echo "DS: $(dig @$r +short zular.net DS)"; echo "TXT: $(dig @$r +short zular.net TXT)"; echo "acme TXT: $(dig @$r +short _acme-challenge.zular.net TXT)"; echo "www: $(dig @$r +short www.zular.net A)"; dig @$r zular.net A +dnssec | grep -E 'status|flags:' ; done
+          echo "NS: $(dig +short zular.net NS)"
+          echo | openssl s_client -connect zular.net:443 -servername zular.net 2>/dev/null | openssl x509 -noout -subject -issuer -dates || true
+          echo | openssl s_client -connect www.zular.net:443 -servername www.zular.net 2>/dev/null | openssl x509 -noout -subject || true
+          curl -sSI http://zular.net/.well-known/acme-challenge/test | head -3
+          curl -sSI http://www.zular.net/ | head -4
+          for ip in 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153; do echo "$ip $(echo | openssl s_client -connect $ip:443 -servername zular.net 2>/dev/null | openssl x509 -noout -subject)"; done
