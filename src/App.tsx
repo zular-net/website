@@ -30,9 +30,7 @@ export default function App({ initialRoute }: { initialRoute?: Route }) {
         <ErrorBoundary>
           <BoltStage />
         </ErrorBoundary>
-        <main>
-          {route === 'media' ? <MediaPage /> : <HomePage />}
-        </main>
+        <main>{route === 'media' ? <MediaPage /> : <HomePage />}</main>
         <Footer />
         <FloatingNav items={route === 'media' ? MEDIA_NAV : HOME_NAV} />
       </BoltProvider>
