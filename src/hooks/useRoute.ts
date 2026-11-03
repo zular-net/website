@@ -3,8 +3,9 @@ import { hrefFor, routeFrom, type Route } from '../lib/route.ts';
 
 const current = (): Route => routeFrom(location.pathname, location.hash);
 
-export function useRoute() {
-  const [route, setRoute] = useState<Route>(current);
+/** `initial` is for the build, where there is no address to read. */
+export function useRoute(initial?: Route) {
+  const [route, setRoute] = useState<Route>(() => initial ?? current());
 
   useEffect(() => {
     const sync = () => setRoute(current());

@@ -34,5 +34,6 @@ export const lightningAddress = 'KAYHAN@ZULAR.NET';
 /** Used only by examples on the page, and labelled there. */
 export const exampleBtcPriceUsd = 110000;
 
+// `?.` keeps this module usable in plain Node tests.
 export const boltModelUrl =
-  import.meta.env.VITE_BOLT_MODEL_URL || `${import.meta.env.BASE_URL}models/zular-bolt-v3a.glb`;
+  import.meta.env?.VITE_BOLT_MODEL_URL || `${import.meta.env?.BASE_URL}models/zular-bolt-v3a.glb`;

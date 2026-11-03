@@ -57,8 +57,8 @@ test('routes to the media page by path or hash', () => {
 });
 
 test('builds page links', () => {
-  assert.equal(hrefFor('media', false), '/media');
+  assert.equal(hrefFor('media', false), '/media/');
   assert.equal(hrefFor('home', false), '/');
   assert.equal(hrefFor('media', true), '#media');
-  assert.equal(canonicalUrlFor('media'), 'https://zular.net/media');
+  assert.equal(canonicalUrlFor('media'), 'https://zular.net/media/');
 });
