@@ -23,7 +23,9 @@ export default function App() {
 
   useEffect(() => {
     document.title = TITLES[routing.route];
-  }, [routing.route]);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.href = `https://zular.net${isMedia ? '/media' : '/'}`;
+  }, [routing.route, isMedia]);
 
   return (
     <RouteContext.Provider value={routing}>

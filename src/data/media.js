@@ -21,7 +21,7 @@ export const colors = [
 
 export const typefaces = [
   { name: 'Inter', role: 'Headlines, amounts and text', family: 'var(--sans)', sample: 'Avant-garde, money.', weight: 600, href: 'https://fonts.google.com/specimen/Inter' },
-  { name: 'IBM Plex Mono', role: 'Addresses and invoices', family: 'var(--mono)', sample: 'kayhan@zular.app', weight: 500, href: 'https://fonts.google.com/specimen/IBM+Plex+Mono' },
+  { name: 'IBM Plex Mono', role: 'Addresses and invoices', family: 'var(--mono)', sample: 'kayhan@zular.net', weight: 500, href: 'https://fonts.google.com/specimen/IBM+Plex+Mono' },
 ];
 
 export const productImages = [

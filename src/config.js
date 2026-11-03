@@ -12,9 +12,9 @@ export const socials = [
 
 export const donationAddresses = { bitcoin: '', lightning: '' };
 
-export const investmentEmail = 'info@daric.digital';
+export const investmentEmail = 'info@zular.net';
 
-export const lightningAddress = 'KAYHAN@ZULAR.APP';
+export const lightningAddress = 'KAYHAN@ZULAR.NET';
 
 // Used only by the examples on the page, and labelled there.
 export const exampleBtcPriceUsd = 110000;
