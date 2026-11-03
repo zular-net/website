@@ -59,10 +59,7 @@ export default function Footer() {
             )}
           </nav>
         </div>
-        <div className={styles.footerLegal}>
-          <span>© 2026 Zular</span>
-          <span>Not available in every country.</span>
-        </div>
+        <p className={styles.footerLegal}>© 2026 Zular</p>
       </Container>
     </footer>
   );
