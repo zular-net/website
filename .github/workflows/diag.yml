@@ -1,7 +1,7 @@
 name: Diag
 on:
   push:
-    branches: [diag]
+    branches: [diag2]
 jobs:
   d:
     runs-on: ubuntu-latest
