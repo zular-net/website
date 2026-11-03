@@ -12,6 +12,7 @@ const PATHS = {
   copy: 'M9 9h11a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1zM5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1',
   check: 'M20 6 9 17l-5-5',
   close: 'M18 6 6 18M6 6l12 12',
+  home: 'M3 11l9-8 9 8M5 9.5V21h14V9.5M10 21v-6h4v6',
   image: 'M3 3h18v18H3zM21 15l-5-5L5 21M8.5 8.5h.01',
   drop: 'M12 2.7l5.7 5.7a8 8 0 1 1-11.3 0z',
 } as const;

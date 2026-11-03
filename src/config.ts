@@ -8,8 +8,10 @@ export interface Download {
   status: string;
 }
 
+export type SocialName = 'Nostr' | 'X' | 'Telegram';
+
 export interface Social {
-  name: string;
+  name: SocialName;
   /** Blank hides the link. */
   href: string;
 }
