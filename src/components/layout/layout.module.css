@@ -1,4 +1,4 @@
-.wrap { width: 100%; max-width: 1240px; margin-inline: auto; padding-left: var(--gutter-left); padding-right: var(--gutter-right); }
+.container { width: 100%; max-width: 1240px; margin-inline: auto; padding-left: var(--gutter-left); padding-right: var(--gutter-right); }
 .section { position: relative; padding-block: clamp(64px, 8vw, 112px); }
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); align-items: center; }
 .split > * { min-width: 0; }
