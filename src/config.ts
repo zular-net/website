@@ -22,7 +22,7 @@ export const downloads: Download[] = [
 ];
 
 export const socials: Social[] = [
-  { name: 'Nostr', href: '' },
+  { name: 'Nostr', href: 'https://npub.world/_@zular.net' },
   { name: 'X', href: 'https://x.com/zular_net' },
   { name: 'Telegram', href: 'https://t.me/zular_net' },
   { name: 'GitHub', href: 'https://github.com/zular-net' },
@@ -30,7 +30,7 @@ export const socials: Social[] = [
 
 export const xHandle = '@zular_net';
 
-export const donationAddresses = { bitcoin: '', lightning: '' };
+export const donationAddresses = { bitcoin: 'bc1qvgkpqmjwlmld78wvm5ec8le2wvn9srvzv3hqd0', lightning: '' };
 
 export const contactEmail = 'info@zular.net';
 

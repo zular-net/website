@@ -163,3 +163,9 @@
     order: 2;
   }
 }
+
+@media (max-width: 480px) {
+  .footerLinks > :first-child {
+    flex: 1 0 100%;
+  }
+}

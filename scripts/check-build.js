@@ -7,6 +7,7 @@ const PAGES = [
   { file: 'dist/404.html', heading: 'Avant-garde', image: 'og-home.jpg', index: false },
 ];
 const FILES = [
+  'dist/.well-known/nostr.json',
   'dist/models/zular-bolt-v3a.glb',
   'dist/og-home.jpg',
   'dist/og-media.jpg',

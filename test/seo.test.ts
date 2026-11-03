@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { PAGES, renderHead, renderSitemap } from '../src/lib/seo.ts';
 
@@ -30,6 +31,7 @@ test('only the home page carries structured data', () => {
   const organization = JSON.parse(json)['@graph'][0];
   assert.equal(organization.name, 'Zular');
   assert.deepEqual(organization.sameAs, [
+    'https://npub.world/_@zular.net',
     'https://x.com/zular_net',
     'https://t.me/zular_net',
     'https://github.com/zular-net',
@@ -46,4 +48,9 @@ test('the sitemap lists both pages', () => {
   const sitemap = renderSitemap();
   assert.ok(sitemap.includes('<loc>https://zular.net/</loc>'));
   assert.ok(sitemap.includes('<loc>https://zular.net/media/</loc>'));
+});
+
+test('the Nostr identity is a valid hex key', () => {
+  const { names } = JSON.parse(readFileSync('public/.well-known/nostr.json', 'utf8'));
+  assert.match(names._, /^[0-9a-f]{64}$/);
 });

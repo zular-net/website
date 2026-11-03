@@ -46,3 +46,25 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
+
+  check-live:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published site
+        run: |
+          pubkey=7b5c24dcd480cf1b33653ffc06b4e9e4c129314c96cc038abedf10115df89351
+          for attempt in 1 2 3 4 5 6 7 8; do
+            headers=$(curl -fsSI https://zular.net/.well-known/nostr.json || true)
+            body=$(curl -fsS https://zular.net/.well-known/nostr.json || true)
+            if echo "$body" | grep -q "$pubkey" && echo "$headers" | grep -qi '^access-control-allow-origin: \*'; then
+              echo "NIP-05 is live"
+              curl -fsS https://zular.net/robots.txt
+              curl -fsS https://zular.net/ | grep -o 'property="og:image" content="[^"]*"'
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "NIP-05 check failed"
+          echo "$headers"
+          exit 1

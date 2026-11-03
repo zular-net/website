@@ -40,7 +40,7 @@ export default function GetSection() {
             <h3>Donate</h3>
             <span>
               {bitcoin || lightning
-                ? 'Support development with Bitcoin.'
+                ? 'Support development with an on-chain Bitcoin payment.'
                 : 'Support development with Bitcoin. Addresses will appear here when they’re ready.'}
             </span>
             {bitcoin && <CopyField value={bitcoin} label="Bitcoin address" />}
