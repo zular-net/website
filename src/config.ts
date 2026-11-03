@@ -30,7 +30,10 @@ export const socials: Social[] = [
 
 export const xHandle = '@zular_net';
 
-export const donationAddresses = { bitcoin: 'bc1qvgkpqmjwlmld78wvm5ec8le2wvn9srvzv3hqd0', lightning: '' };
+export const donationAddresses = {
+  bitcoin: 'bc1qvgkpqmjwlmld78wvm5ec8le2wvn9srvzv3hqd0',
+  lightning: '',
+};
 
 export const contactEmail = 'info@zular.net';
 
