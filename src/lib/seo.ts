@@ -1,5 +1,6 @@
 // Titles, descriptions and share images for each page. The build writes these into the HTML,
 // because link previews and many crawlers don't run JavaScript.
+
 import { socials, xHandle } from '../config.ts';
 import { canonicalUrlFor, SITE_URL, type Route } from './route.ts';
 

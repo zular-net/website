@@ -19,6 +19,7 @@ test('search snippets fit', () => {
   }
 });
 
+
 test('cards name the X account', () => {
   assert.match(renderHead('media'), /name="twitter:site" content="@zular_net"/);
 });
