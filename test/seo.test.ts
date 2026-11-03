@@ -19,11 +19,18 @@ test('search snippets fit', () => {
   }
 });
 
+
+test('cards name the X account', () => {
+  assert.match(renderHead('media'), /name="twitter:site" content="@zular_net"/);
+});
+
 test('only the home page carries structured data', () => {
   const start = '<script type="application/ld+json">';
   const home = renderHead('home');
   const json = home.slice(home.indexOf(start) + start.length, home.indexOf('</script>'));
-  assert.equal(JSON.parse(json)['@graph'][0].name, 'Zular');
+  const organization = JSON.parse(json)['@graph'][0];
+  assert.equal(organization.name, 'Zular');
+  assert.deepEqual(organization.sameAs, ['https://x.com/zular_net', 'https://t.me/zular_net']);
   assert.ok(!renderHead('media').includes(start));
 });
 
