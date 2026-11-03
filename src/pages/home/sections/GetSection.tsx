@@ -44,7 +44,9 @@ export default function GetSection() {
                 ? 'Support development with an on-chain Bitcoin payment.'
                 : 'Support development with Bitcoin. Addresses will appear here when they’re ready.'}
             </span>
-            {bitcoin && <CopyField value={bitcoin} label="Bitcoin address" icon={<BitcoinLogo />} />}
+            {bitcoin && (
+              <CopyField value={bitcoin} label="Bitcoin address" icon={<BitcoinLogo />} />
+            )}
             {lightning && <CopyField value={lightning} label="Lightning address" />}
           </div>
           <div className={styles.supportTile}>
