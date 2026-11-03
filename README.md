@@ -1,33 +1,36 @@
-# Daric website
+# Zular website
 
-A single-page React and Vite landing page for Daric.
+The landing page for Zular, built with React and Vite. The design lives in the `Website` section of the `UI` page in the Zular Figma file.
 
-## Configure links and releases
-
-Edit `src/config.js`:
-
-- Set each platform's `href` and `active: true` when a release is available. Inactive platforms show “Coming soon”.
-- Set each social destination's `href` to the official Nostr, X, Telegram, or email address. Blank destinations remain visible but inactive until configured.
-- Set `donationAddresses.bitcoin` and `donationAddresses.lightning` to enable the Donate address rows and copy buttons.
-- The investment contact is `investmentEmail` (`info@daric.digital`).
-
-## Local development
+## Run it
 
 ```sh
 npm install
 npm run dev
 ```
 
-## Production build
-
 ```sh
-npm run build
-```
-
-## Docker
-
-```sh
+npm test            # logic tests, no extra packages needed
+npm run build       # production build in dist/
 docker compose up --build
 ```
 
-The site is available at `http://localhost:8080`.
+## Change the content
+
+- `src/config.js`: download links, social links, donation addresses, contact email. Blank values stay hidden or show "Coming soon".
+- `src/data/examples.js`: the sample activity, offers and trust graph.
+- `src/data/media.js` and `public/brand-assets/`: the media assets page and its files.
+
+## How it's organised
+
+- `src/pages/`: the home page and the media assets page at `/media`.
+- `src/sections/`: one component per home page section.
+- `src/components/`: `ui` (buttons, rows, icons), `card` (balance card), `layout` (section, nav, footer), `bolt` (3D).
+- `src/lib/`: pure logic with tests in `test/`.
+- `src/styles/`: tokens that mirror the Figma variables.
+
+## The 3D bolt
+
+`public/models/zular-bolt-v3a.glb` is the real brand model. It renders live with three.js, and `BoltAnchor` marks each place it can fly to as the page scrolls.
+
+three.js loads as a separate chunk after the page is usable. If WebGL is missing, the model can't load, or the graphics context is lost, each anchor shows the flat logo instead.

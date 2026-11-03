@@ -1,0 +1,61 @@
+/* Tokens mirror the Brand and UI variables in the Zular Figma file. */
+:root {
+  color-scheme: dark;
+  --ground: #0b0b0f;
+  --surface: #17171d;
+  --raised: #24242c;
+  --raised-hover: #2e2e38;
+  --hairline: rgb(255 255 255 / 0.08);
+  --white: #fff;
+  --text: var(--white);
+  --muted: #9b9ba8;
+  --accent: #a893ff;
+  --brand: #7a5cff;
+  --action: #7452ff;
+  --action-hover: #7f60ff;
+  --success: #34d399;
+  --pending: #ffc24b;
+  --tint: #e4dcff;
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  --sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --gutter-left: max(20px, env(safe-area-inset-left, 0px));
+  --gutter-right: max(20px, env(safe-area-inset-right, 0px));
+
+  --tone-teal: linear-gradient(135deg, #5fd3b3, #1f7f8c);
+  --tone-blue: linear-gradient(135deg, #6aa8ff, #3457d5);
+  --tone-purple: linear-gradient(135deg, #e08bff, #7c35c9);
+  --tone-amber: linear-gradient(135deg, #ffc24b, #c9702b);
+  --tone-rose: linear-gradient(135deg, #ff9e7a, #d14f7e);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 24px; overflow-x: clip; }
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--ground);
+  color: var(--text);
+  font: 400 16px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ol { margin: 0; }
+a { color: inherit; }
+button, input { font: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

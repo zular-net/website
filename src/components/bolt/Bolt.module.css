@@ -1,0 +1,5 @@
+.canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 20; pointer-events: none; }
+.anchor { display: block; color: var(--brand); aspect-ratio: 13 / 16; }
+.anchor svg { display: block; width: 100%; height: 100%; transition: opacity 0.4s; }
+.anchor[data-light='true'] { color: var(--white); }
+.anchor[data-ready='true'] svg { opacity: 0.12; }
