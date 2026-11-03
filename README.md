@@ -15,6 +15,10 @@ npm run build       # production build in dist/
 docker compose up --build
 ```
 
+## Publishing
+
+Every push to `main` runs the tests, builds the site and publishes it to https://zular.net through GitHub Pages (`.github/workflows/deploy.yml`). Publishing runs only while the repository is public, because GitHub's free plan has no Pages for private repositories.
+
 ## Change the content
 
 - `src/config.js`: download links, social links, donation addresses, contact email. Blank values stay hidden or show "Coming soon".
