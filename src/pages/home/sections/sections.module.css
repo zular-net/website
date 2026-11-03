@@ -368,6 +368,10 @@
 }
 
 /* Coming soon */
+.soonBolt {
+  width: clamp(120px, 15vw, 190px);
+  margin-top: 28px;
+}
 .soonCard {
   display: flex;
   align-items: flex-start;

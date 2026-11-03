@@ -163,3 +163,7 @@
 .copyButton:hover {
   background: var(--raised-hover);
 }
+.bitcoinLogo {
+  flex: none;
+  color: var(--bitcoin);
+}

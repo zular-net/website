@@ -1,3 +1,4 @@
+import BoltAnchor from '../../../components/bolt/BoltAnchor.tsx';
 import { Heading, Section, Split } from '../../../components/layout/Section.tsx';
 import Icon, { type IconName } from '../../../components/ui/Icon.tsx';
 import styles from './sections.module.css';
@@ -20,9 +21,12 @@ export default function ComingSoonSection() {
   return (
     <Section id="soon">
       <Split>
-        <Heading eyebrow="Coming soon" title="More is on the way.">
-          The wallet comes first. These follow once it’s in your hands.
-        </Heading>
+        <div>
+          <Heading eyebrow="Coming soon" title="More is on the way.">
+            The wallet comes first. These follow once it’s in your hands.
+          </Heading>
+          <BoltAnchor className={styles.soonBolt} />
+        </div>
         <div className={styles.stack}>
           {FEATURES.map((feature) => (
             <article key={feature.title} className={styles.soonCard}>
