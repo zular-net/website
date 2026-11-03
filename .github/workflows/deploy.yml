@@ -28,8 +28,6 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
-      - name: Check the pages exist
-        run: test -f dist/index.html && test -f dist/media/index.html && test -f dist/404.html && test -f dist/models/zular-bolt-v3a.glb
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

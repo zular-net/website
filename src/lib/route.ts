@@ -1,6 +1,6 @@
 export type Route = 'home' | 'media';
 
-const SITE_URL = 'https://zular.net';
+export const SITE_URL = 'https://zular.net';
 
 // Production uses real paths. A build with VITE_HASH_ROUTES uses the hash,
 // for hosts that serve one file. `?.` keeps this module usable in plain Node tests.
@@ -13,9 +13,9 @@ export function routeFrom(pathname: string, hash: string, hashRoutes = useHashRo
 
 export function hrefFor(route: Route, hashRoutes = useHashRoutes): string {
   if (hashRoutes) return route === 'media' ? '#media' : '#home';
-  return route === 'media' ? '/media' : '/';
+  return route === 'media' ? '/media/' : '/';
 }
 
 export function canonicalUrlFor(route: Route): string {
-  return `${SITE_URL}${route === 'media' ? '/media' : '/'}`;
+  return `${SITE_URL}${route === 'media' ? '/media/' : '/'}`;
 }
